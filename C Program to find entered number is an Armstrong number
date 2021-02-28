@@ -1,0 +1,45 @@
+
+/*
+ *  Author: Techyrick.com
+ */
+
+#include<stdio.h> 
+//#include 
+
+void main() {
+
+
+int number,temp_number,temp_var,sum,power_of_digit;
+
+//clrscr();
+
+printf("\n Enter a 3 digit number : ");
+scanf("%d",&number);
+
+temp_number = number;
+
+while(temp_number >=1 ) {
+       
+      temp_var = temp_number%10; //get unit place digit
+      power_of_digit = temp_var*temp_var*temp_var; //find the power
+      sum = sum + power_of_digit; //add to sum
+      temp_number = temp_number/10; //remove the last digit
+       
+   }
+
+     
+   if(sum == number) {
+       
+       printf("\n Entered number %d is a Armstrong Number", number);
+   }
+   else {
+       
+        printf("\n Entered number %d is not Armstrong Number", number);
+   }
+   
+
+ 
+//getch();  
+   
+ }
+
